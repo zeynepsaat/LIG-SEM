@@ -1,0 +1,733 @@
+================================================================================
+STATISTICAL ANALYSIS REPORT
+LIG Error Diffusion Algorithm Comparison
+================================================================================
+
+
+================================================================================
+METRIC: porosity_%
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 10
+    Mean ± SD = 28.291 ± 7.528
+    Median (IQR) = 30.423 (25.889 - 32.458)
+    Range = [14.140, 38.873]
+
+  Standard:
+    n = 10
+    Mean ± SD = 39.210 ± 4.989
+    Median (IQR) = 40.339 (34.783 - 42.278)
+    Range = [31.642, 47.407]
+
+  Stucki:
+    n = 10
+    Mean ± SD = 36.299 ± 7.924
+    Median (IQR) = 37.797 (28.313 - 43.077)
+    Range = [25.497, 46.751]
+
+  Jarvis:
+    n = 10
+    Mean ± SD = 31.134 ± 5.579
+    Median (IQR) = 32.922 (31.262 - 33.515)
+    Range = [20.121, 37.320]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 12.6966
+  p-value = 0.0053
+  Effect size = 0.3256
+  Significant: True
+
+Post-hoc Pairwise Comparisons:
+--------------------------------------------------------------------------------
+  Floyd vs Standard:
+    p-corrected = 0.0102 (*)
+    Cohen's d = -1.710 (large)
+    Mean difference = -10.920
+
+  Floyd vs Stucki:
+    p-corrected = 0.5338 (ns)
+    Cohen's d = -1.036 (large)
+    Mean difference = -8.008
+
+  Floyd vs Jarvis:
+    p-corrected = 0.9718 (ns)
+    Cohen's d = -0.429 (small)
+    Mean difference = -2.844
+
+  Standard vs Stucki:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.440 (small)
+    Mean difference = 2.911
+
+  Standard vs Jarvis:
+    p-corrected = 0.0348 (*)
+    Cohen's d = 1.526 (large)
+    Mean difference = 8.076
+
+  Stucki vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.754 (medium)
+    Mean difference = 5.165
+
+
+================================================================================
+METRIC: avg_pore_area_um2
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 10
+    Mean ± SD = 0.541 ± 0.942
+    Median (IQR) = 0.065 (0.005 - 0.431)
+    Range = [0.000, 2.749]
+
+  Standard:
+    n = 10
+    Mean ± SD = 2.228 ± 3.981
+    Median (IQR) = 0.293 (0.060 - 1.136)
+    Range = [0.009, 10.965]
+
+  Stucki:
+    n = 10
+    Mean ± SD = 2.255 ± 4.325
+    Median (IQR) = 0.081 (0.009 - 1.012)
+    Range = [0.000, 10.631]
+
+  Jarvis:
+    n = 10
+    Mean ± SD = 0.345 ± 0.693
+    Median (IQR) = 0.080 (0.014 - 0.240)
+    Range = [0.002, 2.248]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 2.3898
+  p-value = 0.4955
+  Effect size = 0.0613
+  Significant: False
+
+
+================================================================================
+METRIC: avg_pore_equiv_diam_um
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 10
+    Mean ± SD = 0.555 ± 0.651
+    Median (IQR) = 0.279 (0.078 - 0.738)
+    Range = [0.023, 1.871]
+
+  Standard:
+    n = 10
+    Mean ± SD = 1.139 ± 1.308
+    Median (IQR) = 0.610 (0.276 - 1.203)
+    Range = [0.104, 3.736]
+
+  Stucki:
+    n = 10
+    Mean ± SD = 1.006 ± 1.437
+    Median (IQR) = 0.312 (0.102 - 1.090)
+    Range = [0.022, 3.679]
+
+  Jarvis:
+    n = 10
+    Mean ± SD = 0.460 ± 0.504
+    Median (IQR) = 0.302 (0.124 - 0.547)
+    Range = [0.049, 1.692]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 2.3898
+  p-value = 0.4955
+  Effect size = 0.0613
+  Significant: False
+
+
+================================================================================
+METRIC: avg_thickness_um
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 13
+    Mean ± SD = 0.672 ± 0.990
+    Median (IQR) = 0.096 (0.065 - 0.807)
+    Range = [0.015, 3.220]
+
+  Standard:
+    n = 13
+    Mean ± SD = 0.400 ± 0.402
+    Median (IQR) = 0.223 (0.118 - 0.541)
+    Range = [0.053, 1.323]
+
+  Stucki:
+    n = 13
+    Mean ± SD = 0.494 ± 0.598
+    Median (IQR) = 0.151 (0.060 - 0.893)
+    Range = [0.023, 1.767]
+
+  Jarvis:
+    n = 13
+    Mean ± SD = 0.541 ± 0.839
+    Median (IQR) = 0.170 (0.057 - 0.690)
+    Range = [0.029, 2.993]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 0.4538
+  p-value = 0.9289
+  Effect size = 0.0089
+  Significant: False
+
+
+================================================================================
+METRIC: connectivity_index
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 13
+    Mean ± SD = 0.367 ± 0.050
+    Median (IQR) = 0.361 (0.324 - 0.403)
+    Range = [0.299, 0.440]
+
+  Standard:
+    n = 13
+    Mean ± SD = 0.303 ± 0.051
+    Median (IQR) = 0.306 (0.257 - 0.343)
+    Range = [0.213, 0.371]
+
+  Stucki:
+    n = 13
+    Mean ± SD = 0.276 ± 0.052
+    Median (IQR) = 0.283 (0.237 - 0.318)
+    Range = [0.182, 0.354]
+
+  Jarvis:
+    n = 13
+    Mean ± SD = 0.368 ± 0.037
+    Median (IQR) = 0.366 (0.346 - 0.395)
+    Range = [0.303, 0.421]
+
+Main Comparison Test: One-way ANOVA
+--------------------------------------------------------------------------------
+  Statistic = 12.2957
+  p-value = 0.0000
+  Effect size = 0.4345
+  Significant: True
+
+Post-hoc Pairwise Comparisons:
+--------------------------------------------------------------------------------
+  Floyd vs Standard:
+    p-corrected = 0.0956 (ns)
+    Cohen's d = 1.270 (large)
+    Mean difference = 0.064
+
+  Floyd vs Stucki:
+    p-corrected = 0.0051 (**)
+    Cohen's d = 1.791 (large)
+    Mean difference = 0.091
+
+  Floyd vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = -0.034 (negligible)
+    Mean difference = -0.001
+
+  Standard vs Stucki:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.516 (medium)
+    Mean difference = 0.027
+
+  Standard vs Jarvis:
+    p-corrected = 0.0176 (*)
+    Cohen's d = -1.471 (large)
+    Mean difference = -0.066
+
+  Stucki vs Jarvis:
+    p-corrected = 0.0011 (**)
+    Cohen's d = -2.057 (large)
+    Mean difference = -0.092
+
+
+================================================================================
+METRIC: fractal_dimension
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 17
+    Mean ± SD = 2.053 ± 0.022
+    Median (IQR) = 2.063 (2.035 - 2.070)
+    Range = [2.018, 2.080]
+
+  Standard:
+    n = 17
+    Mean ± SD = 2.065 ± 0.033
+    Median (IQR) = 2.075 (2.048 - 2.088)
+    Range = [1.987, 2.096]
+
+  Stucki:
+    n = 17
+    Mean ± SD = 2.053 ± 0.034
+    Median (IQR) = 2.064 (2.023 - 2.085)
+    Range = [1.996, 2.094]
+
+  Jarvis:
+    n = 17
+    Mean ± SD = 2.054 ± 0.018
+    Median (IQR) = 2.056 (2.039 - 2.065)
+    Range = [2.024, 2.080]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 4.4780
+  p-value = 0.2143
+  Effect size = 0.0668
+  Significant: False
+
+
+================================================================================
+METRIC: contrast
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 17
+    Mean ± SD = 510.688 ± 220.901
+    Median (IQR) = 433.737 (335.898 - 657.754)
+    Range = [271.883, 998.575]
+
+  Standard:
+    n = 17
+    Mean ± SD = 1013.543 ± 527.422
+    Median (IQR) = 1063.195 (512.206 - 1393.172)
+    Range = [350.334, 1988.766]
+
+  Stucki:
+    n = 17
+    Mean ± SD = 1091.324 ± 772.824
+    Median (IQR) = 942.277 (392.053 - 1688.586)
+    Range = [110.776, 2495.701]
+
+  Jarvis:
+    n = 17
+    Mean ± SD = 723.349 ± 444.994
+    Median (IQR) = 565.576 (495.499 - 813.495)
+    Range = [262.179, 2083.696]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 9.3216
+  p-value = 0.0253
+  Effect size = 0.1391
+  Significant: True
+
+Post-hoc Pairwise Comparisons:
+--------------------------------------------------------------------------------
+  Floyd vs Standard:
+    p-corrected = 0.0164 (*)
+    Cohen's d = -1.244 (large)
+    Mean difference = -502.855
+
+  Floyd vs Stucki:
+    p-corrected = 0.4075 (ns)
+    Cohen's d = -1.022 (large)
+    Mean difference = -580.636
+
+  Floyd vs Jarvis:
+    p-corrected = 0.4739 (ns)
+    Cohen's d = -0.605 (medium)
+    Mean difference = -212.661
+
+  Standard vs Stucki:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = -0.118 (negligible)
+    Mean difference = -77.782
+
+  Standard vs Jarvis:
+    p-corrected = 0.5488 (ns)
+    Cohen's d = 0.595 (medium)
+    Mean difference = 290.193
+
+  Stucki vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.584 (medium)
+    Mean difference = 367.975
+
+
+================================================================================
+METRIC: correlation
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 17
+    Mean ± SD = 0.798 ± 0.067
+    Median (IQR) = 0.809 (0.758 - 0.836)
+    Range = [0.655, 0.914]
+
+  Standard:
+    n = 17
+    Mean ± SD = 0.616 ± 0.231
+    Median (IQR) = 0.622 (0.469 - 0.799)
+    Range = [0.201, 0.935]
+
+  Stucki:
+    n = 17
+    Mean ± SD = 0.727 ± 0.194
+    Median (IQR) = 0.769 (0.511 - 0.894)
+    Range = [0.407, 0.929]
+
+  Jarvis:
+    n = 17
+    Mean ± SD = 0.767 ± 0.083
+    Median (IQR) = 0.767 (0.725 - 0.837)
+    Range = [0.582, 0.879]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 5.8831
+  p-value = 0.1174
+  Effect size = 0.0878
+  Significant: False
+
+
+================================================================================
+METRIC: energy
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 17
+    Mean ± SD = 0.035 ± 0.022
+    Median (IQR) = 0.026 (0.021 - 0.040)
+    Range = [0.013, 0.094]
+
+  Standard:
+    n = 17
+    Mean ± SD = 0.026 ± 0.008
+    Median (IQR) = 0.026 (0.020 - 0.029)
+    Range = [0.014, 0.046]
+
+  Stucki:
+    n = 17
+    Mean ± SD = 0.021 ± 0.006
+    Median (IQR) = 0.021 (0.015 - 0.023)
+    Range = [0.014, 0.034]
+
+  Jarvis:
+    n = 17
+    Mean ± SD = 0.030 ± 0.014
+    Median (IQR) = 0.029 (0.020 - 0.038)
+    Range = [0.010, 0.059]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 7.9532
+  p-value = 0.0470
+  Effect size = 0.1187
+  Significant: True
+
+Post-hoc Pairwise Comparisons:
+--------------------------------------------------------------------------------
+  Floyd vs Standard:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.562 (medium)
+    Mean difference = 0.009
+
+  Floyd vs Stucki:
+    p-corrected = 0.1150 (ns)
+    Cohen's d = 0.907 (large)
+    Mean difference = 0.014
+
+  Floyd vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.279 (small)
+    Mean difference = 0.005
+
+  Standard vs Stucki:
+    p-corrected = 0.1801 (ns)
+    Cohen's d = 0.730 (medium)
+    Mean difference = 0.005
+
+  Standard vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = -0.356 (small)
+    Mean difference = -0.004
+
+  Stucki vs Jarvis:
+    p-corrected = 0.2745 (ns)
+    Cohen's d = -0.862 (large)
+    Mean difference = -0.009
+
+
+================================================================================
+METRIC: homogeneity
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 17
+    Mean ± SD = 0.112 ± 0.055
+    Median (IQR) = 0.089 (0.077 - 0.127)
+    Range = [0.046, 0.247]
+
+  Standard:
+    n = 17
+    Mean ± SD = 0.082 ± 0.031
+    Median (IQR) = 0.074 (0.057 - 0.095)
+    Range = [0.046, 0.144]
+
+  Stucki:
+    n = 17
+    Mean ± SD = 0.087 ± 0.033
+    Median (IQR) = 0.083 (0.058 - 0.109)
+    Range = [0.040, 0.166]
+
+  Jarvis:
+    n = 17
+    Mean ± SD = 0.090 ± 0.036
+    Median (IQR) = 0.079 (0.073 - 0.091)
+    Range = [0.045, 0.177]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 3.1866
+  p-value = 0.3637
+  Effect size = 0.0476
+  Significant: False
+
+
+================================================================================
+METRIC: coefficient_of_variation
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 6
+    Mean ± SD = 25.126 ± 9.853
+    Median (IQR) = 24.937 (17.520 - 32.636)
+    Range = [13.784, 36.848]
+
+  Standard:
+    n = 6
+    Mean ± SD = 25.750 ± 3.175
+    Median (IQR) = 24.433 (23.761 - 27.336)
+    Range = [22.797, 30.995]
+
+  Stucki:
+    n = 6
+    Mean ± SD = 32.334 ± 7.771
+    Median (IQR) = 32.031 (25.196 - 39.119)
+    Range = [24.738, 40.803]
+
+  Jarvis:
+    n = 6
+    Mean ± SD = 30.351 ± 6.051
+    Median (IQR) = 31.600 (25.300 - 35.704)
+    Range = [22.754, 35.883]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 4.5467
+  p-value = 0.2082
+  Effect size = 0.1977
+  Significant: False
+
+
+================================================================================
+METRIC: regional_cv
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 6
+    Mean ± SD = 7.765 ± 4.572
+    Median (IQR) = 7.242 (4.752 - 9.280)
+    Range = [2.738, 15.486]
+
+  Standard:
+    n = 6
+    Mean ± SD = 4.317 ± 1.526
+    Median (IQR) = 4.035 (3.396 - 4.383)
+    Range = [2.941, 7.207]
+
+  Stucki:
+    n = 6
+    Mean ± SD = 5.158 ± 1.934
+    Median (IQR) = 4.727 (3.551 - 6.397)
+    Range = [3.329, 8.054]
+
+  Jarvis:
+    n = 6
+    Mean ± SD = 7.806 ± 3.007
+    Median (IQR) = 6.842 (5.979 - 9.688)
+    Range = [4.453, 12.373]
+
+Main Comparison Test: One-way ANOVA
+--------------------------------------------------------------------------------
+  Statistic = 2.1425
+  p-value = 0.1268
+  Effect size = 0.2432
+  Significant: False
+
+
+================================================================================
+METRIC: intensity_entropy
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 6
+    Mean ± SD = 3.903 ± 0.525
+    Median (IQR) = 3.936 (3.529 - 4.283)
+    Range = [3.230, 4.523]
+
+  Standard:
+    n = 6
+    Mean ± SD = 4.162 ± 0.229
+    Median (IQR) = 4.096 (3.972 - 4.374)
+    Range = [3.951, 4.430]
+
+  Stucki:
+    n = 6
+    Mean ± SD = 4.599 ± 0.031
+    Median (IQR) = 4.604 (4.601 - 4.610)
+    Range = [4.539, 4.632]
+
+  Jarvis:
+    n = 6
+    Mean ± SD = 4.410 ± 0.625
+    Median (IQR) = 4.454 (3.891 - 4.971)
+    Range = [3.678, 5.031]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 8.9667
+  p-value = 0.0297
+  Effect size = 0.3899
+  Significant: True
+
+Post-hoc Pairwise Comparisons:
+--------------------------------------------------------------------------------
+  Floyd vs Standard:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = -0.639 (medium)
+    Mean difference = -0.259
+
+  Floyd vs Stucki:
+    p-corrected = 0.0130 (*)
+    Cohen's d = -1.869 (large)
+    Mean difference = -0.696
+
+  Floyd vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = -0.879 (large)
+    Mean difference = -0.507
+
+  Standard vs Stucki:
+    p-corrected = 0.0130 (*)
+    Cohen's d = -2.679 (large)
+    Mean difference = -0.437
+
+  Standard vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = -0.528 (medium)
+    Mean difference = -0.249
+
+  Stucki vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.425 (small)
+    Mean difference = 0.188
+
+
+================================================================================
+METRIC: uniformity_index
+================================================================================
+
+Descriptive Statistics:
+--------------------------------------------------------------------------------
+  Floyd:
+    n = 6
+    Mean ± SD = 0.000 ± 0.000
+    Median (IQR) = 0.000 (0.000 - 0.000)
+    Range = [0.000, 0.001]
+
+  Standard:
+    n = 6
+    Mean ± SD = 0.000 ± 0.000
+    Median (IQR) = 0.000 (0.000 - 0.000)
+    Range = [0.000, 0.000]
+
+  Stucki:
+    n = 6
+    Mean ± SD = 0.000 ± 0.000
+    Median (IQR) = 0.000 (0.000 - 0.000)
+    Range = [0.000, 0.000]
+
+  Jarvis:
+    n = 6
+    Mean ± SD = 0.000 ± 0.000
+    Median (IQR) = 0.000 (0.000 - 0.000)
+    Range = [0.000, 0.000]
+
+Main Comparison Test: Kruskal-Wallis H-test
+--------------------------------------------------------------------------------
+  Statistic = 8.7800
+  p-value = 0.0324
+  Effect size = 0.3817
+  Significant: True
+
+Post-hoc Pairwise Comparisons:
+--------------------------------------------------------------------------------
+  Floyd vs Standard:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.759 (medium)
+    Mean difference = 0.000
+
+  Floyd vs Stucki:
+    p-corrected = 0.0130 (*)
+    Cohen's d = 1.190 (large)
+    Mean difference = 0.000
+
+  Floyd vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.748 (medium)
+    Mean difference = 0.000
+
+  Standard vs Stucki:
+    p-corrected = 0.0130 (*)
+    Cohen's d = 1.780 (large)
+    Mean difference = 0.000
+
+  Standard vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = 0.069 (negligible)
+    Mean difference = 0.000
+
+  Stucki vs Jarvis:
+    p-corrected = 1.0000 (ns)
+    Cohen's d = -0.893 (large)
+    Mean difference = -0.000
+
+
+================================================================================
+END OF REPORT
+================================================================================

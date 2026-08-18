@@ -1,0 +1,21 @@
+================================================================================
+OUTLIER DETECTION REPORT
+================================================================================
+
+Method: IQR
+Total metrics analyzed: 1
+
+--------------------------------------------------------------------------------
+Metric: porosity
+  Total observations: 30
+  Outliers detected: 1 (3.3%)
+  Mean (all): 16.643 ± 3.860
+  Mean (clean): 16.010 ± 1.727
+  Impact of removal: 3.80% change in mean
+
+================================================================================
+RECOMMENDATION:
+================================================================================
+
+✓ MINIMAL IMPACT: Outlier removal has <10% effect on all metrics.
+  Retaining outliers is acceptable as they represent real data variability.

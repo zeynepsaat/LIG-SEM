@@ -1,0 +1,110 @@
+================================================================================
+1000× MAGNIFICATION ANALYSIS REPORT
+================================================================================
+
+Total samples: n = 16
+
+Samples per algorithm:
+  - Floyd-Steinberg: n = 4
+  - Standard: n = 4
+  - Stucki: n = 4
+  - Jarvis: n = 4
+
+--------------------------------------------------------------------------------
+METRICS SUMMARY (Mean ± SD)
+--------------------------------------------------------------------------------
+
+
+Porosity (%):
+  Floyd-Steinberg     :   35.788 ±  16.861 (n=4)
+  Standard            :   45.071 ±   2.073 (n=4)
+  Stucki              :   45.918 ±   2.516 (n=4)
+  Jarvis              :   38.343 ±  13.250 (n=4)
+
+Average Pore Area (µm²):
+  Floyd-Steinberg     :  862.836 ± 1722.148 (n=4)
+  Standard            :    9.164 ±   1.249 (n=4)
+  Stucki              :   10.828 ±   3.095 (n=4)
+  Jarvis              :    7.083 ±   6.974 (n=4)
+
+Average Pore Diameter (µm):
+  Floyd-Steinberg     :   17.652 ±  32.394 (n=4)
+  Standard            :    3.410 ±   0.227 (n=4)
+  Stucki              :    3.685 ±   0.525 (n=4)
+  Jarvis              :    2.591 ±   1.753 (n=4)
+
+Average Fiber Thickness (µm):
+  Floyd-Steinberg     :    6.044 ±   8.634 (n=4)
+  Standard            :    1.242 ±   0.155 (n=4)
+  Stucki              :    1.398 ±   0.332 (n=4)
+  Jarvis              :    1.524 ±   1.004 (n=4)
+
+Connectivity Index:
+  Floyd-Steinberg     :    0.341 ±   0.049 (n=4)
+  Standard            :    0.320 ±   0.045 (n=4)
+  Stucki              :    0.311 ±   0.019 (n=4)
+  Jarvis              :    0.328 ±   0.023 (n=4)
+
+Fractal Dimension:
+  Floyd-Steinberg     :    2.079 ±   0.018 (n=4)
+  Standard            :    2.089 ±   0.005 (n=4)
+  Stucki              :    2.084 ±   0.013 (n=4)
+  Jarvis              :    2.070 ±   0.028 (n=4)
+
+Coefficient of Variation (%):
+  Floyd-Steinberg     :   33.184 ±  13.808 (n=4)
+  Standard            :   31.050 ±   5.873 (n=4)
+  Stucki              :   33.743 ±   6.663 (n=4)
+  Jarvis              :   34.363 ±   8.981 (n=4)
+
+Regional CV (%):
+  Floyd-Steinberg     :    7.246 ±   5.816 (n=4)
+  Standard            :    3.006 ±   1.005 (n=4)
+  Stucki              :    3.636 ±   2.246 (n=4)
+  Jarvis              :    7.948 ±   4.122 (n=4)
+
+Intensity Entropy:
+  Floyd-Steinberg     :    4.105 ±   0.676 (n=4)
+  Standard            :    4.246 ±   0.205 (n=4)
+  Stucki              :    4.477 ±   0.184 (n=4)
+  Jarvis              :    4.401 ±   0.570 (n=4)
+
+Local Variance Std:
+  Floyd-Steinberg     :  474.405 ± 455.189 (n=4)
+  Standard            :  453.288 ± 184.516 (n=4)
+  Stucki              :  503.176 ± 133.701 (n=4)
+  Jarvis              :  478.049 ± 386.257 (n=4)
+
+Uniformity Index:
+  Floyd-Steinberg     :   3.01e-04 ±  3.61e-04 (n=4)
+  Standard            :   1.34e-04 ±  5.42e-05 (n=4)
+  Stucki              :   9.14e-05 ±  3.35e-05 (n=4)
+  Jarvis              :   1.37e-04 ±  1.24e-04 (n=4)
+
+GLCM Contrast:
+  Floyd-Steinberg     : 1590.150 ± 1447.875 (n=4)
+  Standard            : 1519.032 ± 503.806 (n=4)
+  Stucki              : 1702.513 ± 273.067 (n=4)
+  Jarvis              : 1443.783 ± 1218.518 (n=4)
+
+GLCM Correlation:
+  Floyd-Steinberg     :    0.638 ±   0.233 (n=4)
+  Standard            :    0.485 ±   0.092 (n=4)
+  Stucki              :    0.510 ±   0.137 (n=4)
+  Jarvis              :    0.679 ±   0.202 (n=4)
+
+GLCM Energy:
+  Floyd-Steinberg     :    0.039 ±   0.037 (n=4)
+  Standard            :    0.023 ±   0.004 (n=4)
+  Stucki              :    0.018 ±   0.005 (n=4)
+  Jarvis              :    0.027 ±   0.022 (n=4)
+
+GLCM Homogeneity:
+  Floyd-Steinberg     :    0.110 ±   0.094 (n=4)
+  Standard            :    0.064 ±   0.008 (n=4)
+  Stucki              :    0.057 ±   0.010 (n=4)
+  Jarvis              :    0.087 ±   0.061 (n=4)
+
+================================================================================
+END OF REPORT
+================================================================================

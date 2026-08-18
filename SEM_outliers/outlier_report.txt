@@ -1,0 +1,98 @@
+================================================================================
+OUTLIER DETECTION REPORT
+================================================================================
+
+Method: IQR
+Total metrics analyzed: 10
+
+--------------------------------------------------------------------------------
+Metric: porosity_%
+  Total observations: 80
+  Outliers detected: 2 (2.5%)
+  Mean (all): 37.759 ± 7.537
+  Mean (clean): 38.323 ± 6.733
+  Impact of removal: 1.49% change in mean
+
+--------------------------------------------------------------------------------
+Metric: avg_pore_area_um2
+  Total observations: 80
+  Outliers detected: 12 (15.0%)
+  Mean (all): 80.391 ± 497.158
+  Mean (clean): 0.320 ± 0.588
+  Impact of removal: 99.60% change in mean
+
+--------------------------------------------------------------------------------
+Metric: avg_pore_equiv_diam_um
+  Total observations: 80
+  Outliers detected: 12 (15.0%)
+  Mean (all): 2.401 ± 9.890
+  Mean (clean): 0.427 ± 0.478
+  Impact of removal: 82.22% change in mean
+
+--------------------------------------------------------------------------------
+Metric: avg_thickness_um
+  Total observations: 108
+  Outliers detected: 12 (11.1%)
+  Mean (all): 0.885 ± 3.841
+  Mean (clean): 0.238 ± 0.312
+  Impact of removal: 73.16% change in mean
+
+--------------------------------------------------------------------------------
+Metric: connectivity_index
+  Total observations: 108
+  Outliers detected: 1 (0.9%)
+  Mean (all): 0.320 ± 0.053
+  Mean (clean): 0.321 ± 0.052
+  Impact of removal: 0.40% change in mean
+
+--------------------------------------------------------------------------------
+Metric: fractal_dimension
+  Total observations: 140
+  Outliers detected: 3 (2.1%)
+  Mean (all): 2.067 ± 0.025
+  Mean (clean): 2.069 ± 0.023
+  Impact of removal: 0.08% change in mean
+
+--------------------------------------------------------------------------------
+Metric: contrast
+  Total observations: 140
+  Outliers detected: 10 (7.1%)
+  Mean (all): 1200.573 ± 1027.150
+  Mean (clean): 979.855 ± 654.893
+  Impact of removal: 18.38% change in mean
+
+--------------------------------------------------------------------------------
+Metric: correlation
+  Total observations: 140
+  Outliers detected: 4 (2.9%)
+  Mean (all): 0.678 ± 0.209
+  Mean (clean): 0.694 ± 0.190
+  Impact of removal: 2.33% change in mean
+
+--------------------------------------------------------------------------------
+Metric: energy
+  Total observations: 140
+  Outliers detected: 7 (5.0%)
+  Mean (all): 0.025 ± 0.012
+  Mean (clean): 0.023 ± 0.008
+  Impact of removal: 7.81% change in mean
+
+--------------------------------------------------------------------------------
+Metric: homogeneity
+  Total observations: 140
+  Outliers detected: 6 (4.3%)
+  Mean (all): 0.082 ± 0.035
+  Mean (clean): 0.077 ± 0.027
+  Impact of removal: 5.96% change in mean
+
+================================================================================
+RECOMMENDATION:
+================================================================================
+
+⚠️  HIGH IMPACT: 4 metrics show >10% change when outliers removed:
+  - avg_pore_area_um2: 99.6% change
+  - avg_pore_equiv_diam_um: 82.2% change
+  - avg_thickness_um: 73.2% change
+  - contrast: 18.4% change
+
+Consider reporting results both with and without outliers.

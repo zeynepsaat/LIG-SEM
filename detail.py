@@ -194,9 +194,11 @@ def generate_visual_outputs(folder):
     print(f"\n📁 Scanning folder: {folder}")
 
     for root, dirs, files in os.walk(folder):
-        # Skip output and cache folders
-        skip_names = {os.path.basename(OUTPUT_DIR), ".venv", "__pycache__"}
-        dirs[:] = [d for d in dirs if d not in skip_names]
+        # Skip output, cache, git, and SEM_ prefixed auxiliary folders
+        dirs[:] = [
+            d for d in dirs
+            if not d.startswith(".") and not d.startswith("SEM_") and d != "__pycache__"
+        ]
 
         folder_name = os.path.basename(root)
         mag = parse_magnification(folder_name)

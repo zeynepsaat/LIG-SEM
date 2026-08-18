@@ -1,0 +1,96 @@
+================================================================================
+REPRODUCIBILITY CONFIGURATION REPORT
+================================================================================
+
+Generated: 2026-03-30T12:11:34.432956
+Analysis: LIG Error Diffusion Algorithm Comparison
+
+--------------------------------------------------------------------------------
+SOFTWARE VERSIONS
+--------------------------------------------------------------------------------
+  python: 3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)]
+  numpy: 2.3.5
+  pandas: 3.0.1
+  opencv: 4.13.0
+  scikit-image: 0.25.2
+  scipy: 1.16.3
+  matplotlib: 3.10.8
+  seaborn: 0.13.2
+
+--------------------------------------------------------------------------------
+ANALYSIS PARAMETERS
+--------------------------------------------------------------------------------
+
+Image Preprocessing:
+  crop_ratio: 0.88
+  → Bottom 12% cropped to remove metadata panel
+
+Porosity Segmentation:
+  gaussian_blur_sigma: 1.0
+  adaptive_threshold_method: gaussian
+  block_size: 25
+  offset: 2
+  magnification_range: 2500-10000x
+  → Adaptive local thresholding for pore detection
+
+Thickness Analysis:
+  gaussian_blur_sigma: 0.6
+  threshold_method: otsu
+  skeletonization_method: Zhang-Suen
+  distance_transform: Euclidean
+  magnification_threshold: ≥25000x
+  → Morphological skeleton + distance transform
+
+Connectivity Analysis:
+  junction_detection_window: 3x3
+  minimum_neighbors: 3
+  → Junction points identified as skeleton pixels with ≥3 neighbors
+
+Fractal Dimension:
+  method: box-counting
+  box_sizes: 2^k where k = log2(min_dim) down to 2
+  → Box-counting method with logarithmic regression
+
+Glcm Texture:
+  distances: [5]
+  angles: [0, 45, 90, 135]
+  angles_radians: [0, 'π/4', 'π/2', '3π/4']
+  levels: 256
+  symmetric: True
+  normed: True
+  features: ['contrast', 'correlation', 'energy', 'homogeneity']
+  → 4-direction rotation-invariant GLCM
+
+Scale Calibration:
+  method: OCR + fallback
+  hfw_constant_um: 414000.0
+  → HFW extracted via OCR; if failed, estimated as 414000/magnification
+
+--------------------------------------------------------------------------------
+STATISTICAL PARAMETERS
+--------------------------------------------------------------------------------
+significance_level: 0.05
+normality_test: Shapiro-Wilk
+homogeneity_test: Levene
+parametric_test: One-way ANOVA
+nonparametric_test: Kruskal-Wallis H-test
+posthoc_test: Mann-Whitney U with Bonferroni correction
+effect_sizes:
+  overall_parametric: eta-squared (η²)
+  overall_nonparametric: epsilon-squared (ε²)
+  pairwise: Cohen's d
+correlation_method: Spearman rank correlation
+multiple_testing_correction: Bonferroni (posthoc), FDR (correlations)
+
+--------------------------------------------------------------------------------
+KNOWN LIMITATIONS
+--------------------------------------------------------------------------------
+1. OCR-based HFW extraction may fail for poor quality metadata
+2. Adaptive threshold parameters chosen empirically (not optimized per image)
+3. No ground truth segmentation validation performed
+4. Small sample sizes may limit statistical power
+5. Assumes all images from same SEM with consistent calibration
+
+================================================================================
+END OF REPORT
+================================================================================

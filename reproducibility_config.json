@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-30T12:11:34.432956",
+    "analysis_type": "LIG Error Diffusion Algorithm Comparison",
+    "report_version": "1.0"
+  },
+  "software_versions": {
+    "python": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)]",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "opencv": "4.13.0",
+    "scikit-image": "0.25.2",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.8",
+    "seaborn": "0.13.2"
+  },
+  "analysis_parameters": {
+    "image_preprocessing": {
+      "crop_ratio": 0.88,
+      "description": "Bottom 12% cropped to remove metadata panel"
+    },
+    "porosity_segmentation": {
+      "gaussian_blur_sigma": 1.0,
+      "adaptive_threshold_method": "gaussian",
+      "block_size": 25,
+      "offset": 2,
+      "magnification_range": "2500-10000x",
+      "description": "Adaptive local thresholding for pore detection"
+    },
+    "thickness_analysis": {
+      "gaussian_blur_sigma": 0.6,
+      "threshold_method": "otsu",
+      "skeletonization_method": "Zhang-Suen",
+      "distance_transform": "Euclidean",
+      "magnification_threshold": "≥25000x",
+      "description": "Morphological skeleton + distance transform"
+    },
+    "connectivity_analysis": {
+      "junction_detection_window": "3x3",
+      "minimum_neighbors": 3,
+      "description": "Junction points identified as skeleton pixels with ≥3 neighbors"
+    },
+    "fractal_dimension": {
+      "method": "box-counting",
+      "box_sizes": "2^k where k = log2(min_dim) down to 2",
+      "description": "Box-counting method with logarithmic regression"
+    },
+    "glcm_texture": {
+      "distances": [
+        5
+      ],
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ],
+      "angles_radians": [
+        0,
+        "π/4",
+        "π/2",
+        "3π/4"
+      ],
+      "levels": 256,
+      "symmetric": true,
+      "normed": true,
+      "features": [
+        "contrast",
+        "correlation",
+        "energy",
+        "homogeneity"
+      ],
+      "description": "4-direction rotation-invariant GLCM"
+    },
+    "scale_calibration": {
+      "method": "OCR + fallback",
+      "hfw_constant_um": 414000.0,
+      "description": "HFW extracted via OCR; if failed, estimated as 414000/magnification"
+    }
+  },
+  "statistical_parameters": {
+    "significance_level": 0.05,
+    "normality_test": "Shapiro-Wilk",
+    "homogeneity_test": "Levene",
+    "parametric_test": "One-way ANOVA",
+    "nonparametric_test": "Kruskal-Wallis H-test",
+    "posthoc_test": "Mann-Whitney U with Bonferroni correction",
+    "effect_sizes": {
+      "overall_parametric": "eta-squared (η²)",
+      "overall_nonparametric": "epsilon-squared (ε²)",
+      "pairwise": "Cohen's d"
+    },
+    "correlation_method": "Spearman rank correlation",
+    "multiple_testing_correction": "Bonferroni (posthoc), FDR (correlations)"
+  },
+  "dimensionality_reduction": {
+    "pca": {
+      "n_components": 2,
+      "scaling": "StandardScaler (z-score)",
+      "description": "Principal Component Analysis"
+    },
+    "tsne": {
+      "n_components": 2,
+      "perplexity": 20,
+      "random_state": 42,
+      "scaling": "StandardScaler (z-score)",
+      "description": "t-SNE with fixed random seed for reproducibility"
+    }
+  },
+  "visualization_parameters": {
+    "dpi": 1000,
+    "font_size": 16,
+    "figure_format": "PNG",
+    "color_palette": "Reds (sequential)",
+    "description": "High-resolution publication-quality figures"
+  },
+  "random_seeds": {
+    "tsne": 42,
+    "note": "t-SNE is the only stochastic method; seed fixed for reproducibility"
+  },
+  "computational_environment": {
+    "platform": "darwin",
+    "python_implementation": "cpython",
+    "note": "Hardware details not captured automatically"
+  },
+  "file_structure": {
+    "input": {
+      "directory_structure": "[power-speed]/[algorithm]/[images]",
+      "supported_formats": [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".tif",
+        ".bmp"
+      ],
+      "magnification_source": "filename suffix (_5000x.tif) or folder name"
+    },
+    "outputs": {
+      "main_results": "SEM_results_full.csv",
+      "per_condition_results": "SEM_results_by_power_speed/",
+      "figures": "SEM_figures/",
+      "visual_overlays": "SEM_outputs/",
+      "statistical_report": "SEM_statistical_report.txt",
+      "latex_tables": "SEM_tables/",
+      "methods_documentation": "METHODS_DOCUMENTATION.md",
+      "reproducibility_report": "reproducibility_config.json"
+    }
+  },
+  "quality_control": {
+    "minimum_sample_size_warning": 3,
+    "outlier_detection_methods": [
+      "IQR (multiplier=1.5)",
+      "Z-score (threshold=3.0)"
+    ],
+    "scale_calibration_validation": "Manual verification of OCR results recommended",
+    "image_quality_checks": "None automated - visual inspection recommended"
+  },
+  "known_limitations": [
+    "OCR-based HFW extraction may fail for poor quality metadata",
+    "Adaptive threshold parameters chosen empirically (not optimized per image)",
+    "No ground truth segmentation validation performed",
+    "Small sample sizes may limit statistical power",
+    "Assumes all images from same SEM with consistent calibration"
+  ],
+  "citation_recommendations": {
+    "software": [
+      "Python (Van Rossum & Drake, 2009)",
+      "NumPy (Harris et al., 2020)",
+      "scikit-image (van der Walt et al., 2014)",
+      "SciPy (Virtanen et al., 2020)",
+      "Matplotlib (Hunter, 2007)",
+      "Seaborn (Waskom, 2021)",
+      "OpenCV (Bradski, 2000)"
+    ],
+    "methods": [
+      "Otsu threshold (Otsu, 1979)",
+      "Zhang-Suen skeletonization (Zhang & Suen, 1984)",
+      "GLCM texture analysis (Haralick et al., 1973)",
+      "Box-counting fractal dimension (Mandelbrot, 1982)",
+      "Shapiro-Wilk test (Shapiro & Wilk, 1965)",
+      "Kruskal-Wallis test (Kruskal & Wallis, 1952)",
+      "Mann-Whitney U test (Mann & Whitney, 1947)",
+      "Effect sizes (Cohen, 1988)"
+    ]
+  }
+}
